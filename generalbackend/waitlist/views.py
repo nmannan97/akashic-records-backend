@@ -20,7 +20,7 @@ class waitlistView(APIView):
     serializer_class = waitlistSerializer
   
     def get(self, request):
-        detail = [ {"name": detail.name, "email": detail.email, 'phone': detail.phonenumber, 'postion': detail.position} 
+        detail = [ {"name": detail.name, "email": detail.email, 'phone': detail.phone, 'postion': detail.position} 
         for detail in waitlist.objects.all()]
         return Response(detail)
   

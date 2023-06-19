@@ -5,8 +5,8 @@ class waitlistAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,               {'fields': ['name']}),
         (None,               {'fields': ['email']}),
-        (None,               {'fields': ['phonenumber']}),
+        (None,               {'fields': ['phone']}),
         (None,               {'fields': ['position']}),
     ]
-    list_display = ('name', 'email', 'phonenumber', 'position')
+    list_display = ('name', 'email', 'phone', 'position')
 admin.site.register(waitlist, waitlistAdmin)
